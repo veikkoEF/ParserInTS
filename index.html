@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Parser</title>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/CanitoFormularioCompra2.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+
+<body>
+    <div></div>
+    <div class="container">
+        <form id="contactForm" action="javascript:void();" method="get">
+            <div class="form-row text-left" style="padding: 0px;">
+                <div class="col"></div>
+                <div class="col-md-6" id="message">
+                    <fieldset style="margin: 0px;padding: 0px;height: 54px;width: 460px;">
+                        <legend style="font-style: normal;font-weight: bold;font-size: 28px;height: 23px;">
+                            Funktionsparser&nbsp;</legend>
+                    </fieldset>
+                    <div class="form-group has-feedback">
+                        <label for="term" style="font-size: 20px;">Funktionsterm: f:=f(x) </label>
+                        <input class="form-control" type="text" id="term" tabindex="-1" name="term" required=""
+                            style="font-size: 21px;height: 45.5px;" />
+                        <label for="varx" style="font-size: 20px;">Wert der Variable x</label>
+                        <input class="form-control" type="text" id="varx" tabindex="-1" name="varx"
+                            required="" style="font-size: 21px;height: 45.5px;" />
+                        <label for="from_name" style="font-size: 20px;">Ergebnis y:=f(x)&nbsp;</label>
+                        <input readonly="true" class="form-control" id="result" style="font-size: 21px;height: 45.5px;" type="text"/>
+                    </div>
+                    <div class="form-group"><button class="btn btn-primary btn-block" type="submit"
+                        onclick="parse()"    
+                        style="background-color: #ff4000;padding: 8px;font-size: 18px;">Berechnen</button>
+                    </div>
+                    <hr>
+                </div>
+                <div class="col"></div>
+            </div>
+        </form>
+    </div>
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="src/parser.js"></script>
+</body>
+
+</html>
